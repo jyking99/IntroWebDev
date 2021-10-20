@@ -1,0 +1,43 @@
+body {
+    /* used for magic footer behavior*/
+    min-height: 100vh;
+    /* used with magic footer behavior*/
+    postion: relative;
+    padding: 2%;
+    width: 100%;
+    color: lightyellow;
+    font-family: Verdana, sans-serif;
+    background-color: #777777;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: white;
+    background-color: darkblue;
+    font-size: 1.5em;
+    padding: 1%;
+}
+
+nav a:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+ul li {
+    list-style: none;
+    padding-bottom: 2%
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: relative;
+    bottom: -50px;
+}

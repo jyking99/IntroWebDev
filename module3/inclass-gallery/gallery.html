@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Jamie Walker">
-	<title>In Class: Image Gallery</title>
-
-	<!-- link rel="stylesheet" href="powerstyles.css" -->
-
-	<style>
-
-	</style>
+    <meta charset="utf-8">
+    <meta name="author" content="Jamie Walker">
+    <title>In Class: Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        nav {
+            width: 20%;
+            float: left;
+        }
+        
+        nav a {
+            border: 0;
+            padding: 1;
+            background-color: unset;
+        }
+        
+        nav a:hover {
+            background-color: gold;
+            padding: 2px;
+            display: inline-block;
+        }
+        
+        ul li {
+            list-style: none;
+            padding: 20px;
+        }
+        
+        a img {
+            max-height: 75px;
+        }
+        
+        footer {
+            position: absolute;
+            height: 60px;
+            bottom: 0px;
+        }
+    </style>
 </head>
 
 
 <body>
-<header>
-	<h1>Image Gallery Example</h1>
-	<!-- add your banner image below before nav -->
-</header>
+    <header>
+        <h1>Image Gallery Example</h1>
+        <!-- add your banner image below before nav -->
+    </header>
 
 
-<h2>Your Images</h2>
-<nav>
-	<ul>
-		<li><a href="image1.html"  target="full-size">
-			<img src="images/image1-thumb.jpg" alt="tortoise thumbnail" width="100">
-		</a>
-		</li>
-		<li><a href="image2.html" target="full-size">
-			<img src="images/image2-thumb.jpg" alt="Rift Valley thumbnail" width="100"></a>
-		</li>
-		<li><a href="image3.html" target="full-size">
-			<img src="images/image3-thumb.jpg" alt="giraffe thumbnail" width="100"></a>
-		</li>
-	</ul>
-</nav>
-<footer>
-	<hr>
-	&copy;Jamie Walker 2021 - Highrock Interactive - Boston, MA 02187 - walkerjj@bc.edu
-</footer>
+    <h2>Your Images</h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="image1.html" target="full-size">
+                    <img src="images/image1-thumb.jpg" alt="tortoise thumbnail" width="100">
+                </a>
+            </li>
+            <li>
+                <a href="image2.html" target="full-size">
+                    <img src="images/image2-thumb.jpg" alt="Rift Valley thumbnail" width="100"></a>
+            </li>
+            <li>
+                <a href="image3.html" target="full-size">
+                    <img src="images/image3-thumb.jpg" alt="giraffe thumbnail" width="100"></a>
+            </li>
+        </ul>
+    </nav>
+    <footer>
+        <hr> &copy;Jamie Walker 2021 - Highrock Interactive - Boston, MA 02187 - walkerjj@bc.edu
+    </footer>
 </body>
+
 </html>
