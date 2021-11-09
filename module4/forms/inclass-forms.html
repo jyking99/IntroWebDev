@@ -62,27 +62,27 @@
 <body>
     <div>
         <form id="content" method="Post" action="https://idesstage2.bc.edu/class/results.php">
-            <label>First Name: </label><br>
-            <input type="text"><br>
+            <label for="fname">First Name: </label><br>
+            <input type="text" name="fname"><br>
 
-            <label>Last Name: </label><br>
-            <input type="text"><br>
+            <label for="lname">Last Name: </label><br>
+            <input type="text" name="lname"><br>
 
-            <label>Email: </label><br>
-            <input type="text" placeholder="*required*" required><br>
+            <label for="email">Email: </label><br>
+            <input type="text" name="email" placeholder="*required*" required><br>
 
-            <label>Favorite Ice Cream: </label><br>
-            <select>
-                <option>Vanilla</option>
-                <option>Chocolate</option>
-                <option>Strawberry</option>
-                <option>Matcha</option>
-                <option>Mushroom</option>
-                <option>Peanut</option>
+            <label for="icecream">Favorite Ice Cream: </label><br>
+            <select name="icecream">
+                <option value="Vanilla">Vanilla</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Matcha">Matcha</option>
+                <option value="Mushroom">Mushroom</option>
+                <option value="Peanut">Peanut</option>
             </select><br><br>
 
-            <label>What do you want to do with your life?</label><br>
-            <textarea rows="5" cols="60"></textarea><br>
+            <label for="life">What do you want to do with your life?</label><br>
+            <textarea name="life" rows="5" cols="60"></textarea><br>
 
             <input id="submit" type="submit" value="Submit">
         </form>
