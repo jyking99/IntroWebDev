@@ -40,7 +40,7 @@
             font-size: large;
         }
 
-        #submit {
+        input#submit {
             border: 4px solid yellow;
             border-radius: 50px 50px;
             text-align: center;
@@ -61,7 +61,7 @@
 
 <body>
     <div>
-        <form id="content" method="post" action="https://idesstage2.bc.edu/class/results.php">
+        <form id="content" method="Post" action="https://idesstage2.bc.edu/class/results.php">
             <label>First Name: </label><br>
             <input type="text"><br>
 
@@ -84,7 +84,7 @@
             <label>What do you want to do with your life?</label><br>
             <textarea rows="5" cols="60"></textarea><br>
 
-            <button id="submit" type="submit">Submit</button>
+            <input id="submit" type="submit" value="Submit">
         </form>
     </div>
 </body>
