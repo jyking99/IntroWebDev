@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="An HTML form">
+    <meta name="keywords" content="form, icecream">
+    <meta name="author" content="Junyi Wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+
+        #content {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+
+        form {
+            font-size: 1.5em;
+            margin-left: 5%;
+            padding-top: 5%;
+            background-color: cornsilk;
+            border: 2px dotted #000;
+        }
+
+        input {
+            margin-bottom: 2%;
+            font-size: 1em;
+        }
+
+        select {
+            font-size: large;
+        }
+
+        textarea {
+            font-size: large;
+        }
+
+        #submit {
+            border: 4px solid yellow;
+            border-radius: 50px 50px;
+            text-align: center;
+            background-color: chocolate;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        #submit:hover {
+            background-color: cornsilk;
+            color: chocolate;
+            font-size: 150%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form id="content" method="post" action="https://idesstage2.bc.edu/class/results.php">
+            <label>First Name: </label><br>
+            <input type="text"><br>
+
+            <label>Last Name: </label><br>
+            <input type="text"><br>
+
+            <label>Email: </label><br>
+            <input type="text" placeholder="*required*" required><br>
+
+            <label>Favorite Ice Cream: </label><br>
+            <select>
+                <option>Vanilla</option>
+                <option>Chocolate</option>
+                <option>Strawberry</option>
+                <option>Matcha</option>
+                <option>Mushroom</option>
+                <option>Peanut</option>
+            </select><br><br>
+
+            <label>What do you want to do with your life?</label><br>
+            <textarea rows="5" cols="60"></textarea><br>
+
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
