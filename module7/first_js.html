@@ -11,12 +11,18 @@
         }
     </style>
     <script>
+        function insertDate(today) {
+            document.getElementById("date_display").innerText = today;
+        }
+
         function getDate() {
             var today = new Date();
             var yyyy = today.getFullYear();
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0');
             today = yyyy + '/' + mm + '/' + dd;
+
+            insertDate(today);
 
             return today;
         }
@@ -26,8 +32,8 @@
 <body>
     <h1>Javascript Example</h1>
     <button type="button" onclick="alert('Hi There!')" id="myButton">Greet</button>
+    <button type="button" onclick="alert(getDate())" id="button2">Display date</button>
     <div id="date_display">
-        <button type="button" onclick="alert(getDate())" id="button2">Display date</button>
     </div>
 </body>
 
