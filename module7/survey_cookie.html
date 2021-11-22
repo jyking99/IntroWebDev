@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Videogame Survey</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-size: 1.3em;
+            background-color: beige;
+        }
+        
+        content {
+            width: 90%;
+            margin: auto;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            margin-left: 5%;
+        }
+        
+        input {
+            margin-bottom: 2%;
+        }
+        
+        input#submit {
+            display: block;
+            background-color: #33ff99;
+            font-weight: bold;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        
+        fieldset {
+            margin-bottom: 2%;
+        }
+        
+        textarea {
+            margin-bottom: 2%;
+        }
+        
+        select option {
+            font-size: 1.75em;
+            width: 150px;
+        }
+        
+        select {
+            margin-bottom: 2%;
+        }
+    </style>
+
+    <script>
+        function setStoredName() {
+            let name = document.cookie;
+            if (name != "") {
+                document.getElementById("welcome").innerText = "Welcome back, " + name + "!";
+            }
+        }
+
+        function saveNameToCookie() {
+            let name = document.getElementById("fname").value;
+            document.cookie = name;
+        }
+    </script>
+</head>
+
+<body onload="setStoredName()">
+    <h1>Videogame survey</h1>
+    <form id="content" method="Post" action="https://idesstage2.bc.edu/class/results.php">
+        <p id="welcome"></p>
+
+        <label for="fname">First Name: </label><br>
+        <input id="fname" type="text" name="fname"><br>
+
+        <label for="lname">Last Name: </label><br>
+        <input type="text" name="lname"><br>
+
+        <label for="email">Email: </label><br>
+        <input type="text" name="email" required><br>
+
+        <fieldset>
+            <legend>What is Your Favorite Genres of Videogame?</legend>
+            <input type="checkbox" name="fav_genre" value="RPG" id="rpg">
+            <label for="rpg">RPG</label><br>
+            <input type="checkbox" name="fav_genre1" value="Sandbox" id="sandbox">
+            <label for="sandbox">Sandbox</label><br>
+            <input type="checkbox" name="fav_genre2" value="FPS" id="fps">
+            <label for="fps">FPS</label><br>
+            <input type="checkbox" name="fav_genre3" value="Puzzle" id="puzzle">
+            <label for="puzzle">Puzzle</label><br>
+            <input type="checkbox" name="fav_genre4" value="Platformer" id="pf">
+            <label for="pf">Platformer</label><br>
+            <input type="checkbox" name="fav_genre5" value="MOBA" id="moba">
+            <label for="moba">MOBA</label><br>
+            <input type="checkbox" name="fav_genre6" value="Action Adventure" id="aa">
+            <label for="aa">Action Adventure</label><br>
+            <input type="checkbox" name="fav_genre7" value="Horror" id="horror">
+            <label for="horror">Horror</label><br>
+            <input type="checkbox" name="fav_genre8" value="Party Game" id="party">
+            <label for="party">Party Game</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>How often do you try a new title?</legend>
+            <input type="radio" name="period" value="Every day" id="everyday">
+            <label for="everyday">Every day</label><br>
+            <input type="radio" name="period" value="Once a week" id="week">
+            <label for="week">Once a week</label><br>
+            <input type="radio" name="period" value="Once a month" id="month">
+            <label for="month">Once a month</label><br>
+            <input type="radio" name="period" value="Once in 2 months" id="twomonth">
+            <label for="twomonth">Once in 2 months</label><br>
+            <input type="radio" name="period" value="Once in 3 months" id="threemonth">
+            <label for="threemonth">Once in 3 months</label><br>
+            <input type="radio" name="period" value="Once in 6 months" id="sixmonth">
+            <label for="sixmonth">Once in 6 months</label><br>
+            <input type="radio" name="period" value="Once in a year" id="year">
+            <label for="year">Once in a year</label><br>
+            <input type="radio" name="period" value="Once in few years" id="fewyear">
+            <label for="fewyear">Once in few years</label><br>
+            <input type="radio" name="period" value="Never" id="never">
+            <label for="never">Never</label><br>
+        </fieldset>
+
+        <legend>Which platform do you play videogames on the most?</legend>
+        <select name="fav_platform">
+            <option value="PC">PC</option>
+            <option value="PS4/PS5">PS4/PS5</option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+            <option value="Xbox">Xbox</option>
+            <option value="Smartphone/Tablet">Smartphone/Tablet</option>
+            <option value="other">other</option>
+        </select>
+
+        <legend>What role does videogame play in your life?</legend>
+        <textarea name="role" rows="3" cols="60"></textarea><br>
+
+        <input id="submit" type="submit" value="Submit" onclick="saveNameToCookie()">
+    </form>
+</body>
+
+</html>
