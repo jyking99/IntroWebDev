@@ -9,24 +9,24 @@
             font-size: 1.3em;
             background-color: beige;
         }
-        
+
         content {
             width: 90%;
             margin: auto;
         }
-        
+
         h1 {
             text-align: center;
         }
-        
+
         form {
             margin-left: 5%;
         }
-        
+
         input {
             margin-bottom: 2%;
         }
-        
+
         input#submit {
             display: block;
             background-color: #33ff99;
@@ -34,45 +34,72 @@
             padding: 20px;
             font-size: 1.5em;
         }
-        
+
         fieldset {
             margin-bottom: 2%;
         }
-        
+
         textarea {
             margin-bottom: 2%;
         }
-        
+
         select option {
             font-size: 1.75em;
             width: 150px;
         }
-        
+
         select {
             margin-bottom: 2%;
         }
     </style>
 
     <script>
-        function setStoredName() {
-            let name = document.cookie;
-            if (name != "") {
-                document.getElementById("welcome").innerText = "Welcome back, " + name + "!";
-            }
+        let exdays = 30;
+
+        function setCookie() {
+            let cname = "FirstName";
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            let cvalue = document.forms[0].fname.value;
+            let save = cname + "=" + cvalue + "; " + expires + "; path=/";
+            console.log(save);
+            document.cookie = save;
+            console.log(save);
+            return true;
         }
 
-        function saveNameToCookie() {
-            let name = document.getElementById("fname").value;
-            document.cookie = name;
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            console.log(decodedCookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let first_name = getCookie("FirstName");
+            if (first_name != "") {
+                alert("Welcome again " + first_name);
+            } else {
+                alert("submit the form to set your cookie");
+            }
         }
     </script>
 </head>
 
-<body onload="setStoredName()">
+<body onload="checkCookie()">
     <h1>Videogame survey</h1>
-    <form id="content" method="Post" action="https://idesstage2.bc.edu/class/results.php">
-        <p id="welcome"></p>
-
+    <form id="content" method="Post" action="https://idesstage2.bc.edu/class/results.php" onsubmit="setCookie()">
         <label for="fname">First Name: </label><br>
         <input id="fname" type="text" name="fname"><br>
 
@@ -139,7 +166,7 @@
         <legend>What role does videogame play in your life?</legend>
         <textarea name="role" rows="3" cols="60"></textarea><br>
 
-        <input id="submit" type="submit" value="Submit" onclick="saveNameToCookie()">
+        <input id="submit" type="submit" value="Submit">
     </form>
 </body>
 
