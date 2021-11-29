@@ -1,0 +1,139 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+#navbar h3 {
+    display: inline-block;
+    margin: 0;
+    line-height: 40px;
+    vertical-align: top;
+    padding-top: 5px;
+    background-color: black;
+    border: 0.18em solid black;
+    color: white;
+    padding-right: 20px;
+    padding-bottom: 0;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    border-left: 1px solid rgb(158, 158, 158);
+}
+
+nav a:hover {
+    background: black;
+    color: white;
+}
+
+body {
+    background:
+        /* top, transparent black, faked with gradient */
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        /* bottom, image */
+        url("../images/winterbg.jpg");
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1 0 auto;
+}
+
+#whitespace {
+    height: 80px;
+}
+
+#title {
+    text-align: center;
+    color: white;
+}
+
+#main {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 10px 20px;
+}
+
+form {
+    padding: 10px;
+    width: fit-content;
+    display: inline-block;
+}
+
+form input {
+    margin-left: 5px;
+}
+
+form button {
+    width: 40%;
+    margin-left: 30%;
+    background-color: rgb(214, 214, 214);
+    border: grey;
+    line-height: 1.8em;
+}
+
+.center {
+    margin: auto;
+    overflow: wrap;
+}
+
+#ack {
+    margin-left: 20px;
+    background-color: rgb(255, 255, 200);
+    width: 40%;
+    display: inline-block;
+}
+
+.block {
+    display: inline-block;
+}
+
+article {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+article p {
+    width: 40%;
+    min-width: 500px;
+    vertical-align: top;
+}
+
+article img {
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    min-height: 30px;
+}
