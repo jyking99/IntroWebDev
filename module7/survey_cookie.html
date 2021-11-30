@@ -9,24 +9,24 @@
             font-size: 1.3em;
             background-color: beige;
         }
-
+        
         content {
             width: 90%;
             margin: auto;
         }
-
+        
         h1 {
             text-align: center;
         }
-
+        
         form {
             margin-left: 5%;
         }
-
+        
         input {
             margin-bottom: 2%;
         }
-
+        
         input#submit {
             display: block;
             background-color: #33ff99;
@@ -34,20 +34,20 @@
             padding: 20px;
             font-size: 1.5em;
         }
-
+        
         fieldset {
             margin-bottom: 2%;
         }
-
+        
         textarea {
             margin-bottom: 2%;
         }
-
+        
         select option {
             font-size: 1.75em;
             width: 150px;
         }
-
+        
         select {
             margin-bottom: 2%;
         }
@@ -63,16 +63,13 @@
             let expires = "expires=" + d.toUTCString();
             let cvalue = document.forms[0].fname.value;
             let save = cname + "=" + cvalue + "; " + expires + "; path=/";
-            console.log(save);
             document.cookie = save;
-            console.log(save);
             return true;
         }
 
         function getCookie(cname) {
             let name = cname + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
-            console.log(decodedCookie);
             let ca = decodedCookie.split(';');
             for (let i = 0; i < ca.length; i++) {
                 let c = ca[i];
