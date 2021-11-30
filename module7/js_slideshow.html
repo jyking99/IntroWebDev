@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript slide show</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Slide show using Javascript">
+    <meta name="keywords" content="javascript, slide show">
+    <meta name="author" content="Junyi Wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            display: none;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://picsum.photos/1000/301">
+        <img src="https://picsum.photos/1000/302">
+        <img src="https://picsum.photos/1000/303">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll("img");
+        console.log(images);
+
+        let i = 0;
+
+        setInterval(function() {
+
+            if (i == 0) {
+                images[i].style.display = 'block';
+            } else if (i == images.length) {
+                images[i - 1].style.display = 'none';
+                images[0].style.display = 'block';
+                i = 0;
+            } else {
+                images[i - 1].style.display = 'none';
+                images[i].style.display = 'block';
+            }
+
+            i++;
+
+        }, 2000);
+    </script>
+</body>
+
+
+</html>
