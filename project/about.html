@@ -2,43 +2,59 @@
 <html>
 
 <head>
-    <title>Canvas to calendar!</title>
+    <title>iFrame Gallery</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Add your Canvas schedules to Google Calendar">
+    <meta name="description" content="Embedded iFrame gallery">
     <meta name="keywords" content="">
     <meta name="author" content="Junyi Wang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
     <script src="script/main.js"></script>
+    <style>
+        #main {
+            padding-left: 1em;
+        }
+    </style>
 </head>
 
-<body>
-    <div id="navbar">
-        <h3>&nbsp;&nbsp;Canvas to Calendar!</h3>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./links.html">Links</a>
-        </nav>
+<body onload="foot()">
+    <div id="content">
+        <div id="navbar">
+            <h3>&nbsp;&nbsp;iFrame Gallery</h3>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./links.html">Links</a>
+                <a href="./about.html" class="current">About</a>
+            </nav>
+        </div>
+        <div id="whitespace"></div>
+        <h1 id="title">About</h1>
+        <div id="main" class="subpage">
+            <article>
+                <h4>1. Find a URL to embed</h4>
+                <p class="block">
+                    Embed any media type including Youtube videos, blog posts, etc.
+                </p>
+                <img class="right" src="images/demo1.jpg">
+            </article>
+            <article>
+                <h4>2. Enter the URL to textbox</h4>
+                <p class="block">
+                    Just enter and hit confirm on the Links page!
+                </p>
+                <img class="right" src="images/demo2.jpg">
+            </article>
+            <article>
+                <h4>3. Done!</h4>
+                <p class="block"></p>
+                <img class="right" src="images/demo3.jpg">
+            </article>
+        </div>
     </div>
-    <div id="whitespace"></div>
-    <h1 id="title">About</h1>
-    <div id="main">
-        <article>
-            <h4>1. Grab your Canvas schedules from the Canvas page</h4>
-            <p class="block">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
-            <img class="right" src="images/demo1.jpg">
-        </article>
-        <article>
-            <h4>2. Add the schedules to Google Calendar</h4>
-            <p class="block">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
-            <img class="right" src="images/demo1.jpg">
-        </article>
-    </div>
-    <footer>
-        test test test test test test test test test test test test test test test test test test test test test
+    <footer id="ftr">
     </footer>
+
 </body>
 
 </html>

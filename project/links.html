@@ -2,45 +2,55 @@
 <html>
 
 <head>
-    <title>Canvas to calendar!</title>
+    <title>iFrame Gallery</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Add your Canvas schedules to Google Calendar">
+    <meta name="description" content="Embedded iFrame gallery">
     <meta name="keywords" content="">
     <meta name="author" content="Junyi Wang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
-    <script src="script/main.js"></script>
+    <script src="script/main.js">
+    </script>
+    <style>
+        #main {
+            padding-left: 1em;
+        }
+    </style>
 </head>
 
-<body>
+<body onload="startEdit()">
     <div id="content">
         <div id="navbar">
-            <h3>&nbsp;&nbsp;Canvas to Calendar!</h3>
+            <h3>&nbsp;&nbsp;iFrame Gallery</h3>
             <nav>
                 <a href="./index.html">Home</a>
+                <a href="./links.html" class="current">Links</a>
                 <a href="./about.html">About</a>
-                <a href="./links.html">Links</a>
             </nav>
         </div>
         <div id="whitespace"></div>
         <h1 id="title">Links</h1>
         <div id="main">
             <article>
-                <h4>Relevant links</h4>
-                <ul>
-                    <li><a href="https://calendar.google.com" target="_new">Google Calendar</a></li>
-                    <li><a href="https://bostoncollege.instructure.com/" target="_new">Boston College Canvas</a></li>
-                </ul>
-
+                <form>
+                    <label>Pin a website: </label>
+                    <input type="text" name="url" placeholder="website URL">
+                    <input type="button" value="preview" onclick="prevUrl(this.form)">
+                    <input type="button" value="add" onclick="saveUrl(this.form)">
+                </form><br>
+                <label>Preview:</label>
+                <div id="preview">
+                </div>
             </article>
-            <article style="height:300px;">
-
+            <article>
+                <h4>Pinned links</h4>
+                <ul id="editlist">
+                </ul>
             </article>
         </div>
     </div>
-    <footer>
-        test test test test test test test test test test test test test test test test test test test test test
+    <footer id="ftr">
     </footer>
 </body>
 
